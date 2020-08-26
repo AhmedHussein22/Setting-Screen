@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget changes(theme) {
   return Padding(
-    padding: const EdgeInsets.all(15.0),
+    padding: const EdgeInsets.only(top: 15,bottom: 15,left:25, right: 25),
     child: Card(
       elevation: 5,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
@@ -13,6 +13,7 @@ Widget changes(theme) {
       child: Column(
         children: <Widget>[
           ListTile(
+            dense: true,
             leading: Icon(
               Icons.lock_outline,
               color: theme.accentColor,
@@ -26,11 +27,14 @@ Widget changes(theme) {
           ),
           Divider(),
           ListTile(
+            dense: true,
             leading: Icon(
               Icons.translate,
               color: theme.accentColor,
             ),
-            title: Text("Change Language"),
+            title: Text("Change Language",
+            style: theme.textTheme.subtitle1
+            ),
             trailing: Icon(
               Icons.keyboard_arrow_right,
               color: theme.buttonColor,
@@ -39,11 +43,12 @@ Widget changes(theme) {
           ),
           Divider(),
           ListTile(
+            dense: true,
             leading: Icon(
               Icons.location_on,
               color: theme.accentColor,
             ),
-            title: Text("Change Location"),
+            title: Text("Change Location", style: theme.textTheme.subtitle1),
             trailing: Icon(
               Icons.keyboard_arrow_right,
               color: theme.buttonColor,

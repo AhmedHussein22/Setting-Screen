@@ -120,6 +120,7 @@ class _SettingsState extends State<Settings> {
                 });
               },
             ),
+            //***************  FloatingActionButton ********************/
             Container(
               alignment: Alignment.bottomLeft,
               child: FloatingActionButton(

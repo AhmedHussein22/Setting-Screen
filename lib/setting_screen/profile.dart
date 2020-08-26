@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
 Widget profile(theme, size) {
-  return Card(
-    color: theme.accentColor,
-    elevation: 10.0,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10.0),
-    ),
-    child: Padding(
-      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+  return Container(
+    alignment: Alignment.centerLeft,
+    height: size.height*0.09,
+    child: Card(
+      semanticContainer: true,
+      color: theme.accentColor,
+      elevation: 5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
       child: ListTile(
         leading: CircleAvatar(
-          radius: size.height * 0.07 / 2,
+          radius: size.height * 0.06 / 2,
           backgroundImage: AssetImage("assets/images/profile.jpg"),
         ),
         title: Text(
